@@ -1,0 +1,37 @@
+{
+    "name": "insite/skeleton",
+    "description": "Proyecto Base para las aplicaciones",
+    "type": "project",
+    "license": "LGPL",
+    "require": {
+        "yiisoft/yii2": "^2.0",
+        "yiisoft/yii2-gii": "^2.0",
+        "yiisoft/yii2-debug": "^2.0",
+        "insite/yii2-gii": "dev-master",
+        "insite/yii2-theme-espire": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "José Nolberto Vilchez Moreno",
+            "email": "jnolbertovm@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "process-timeout": 1800,
+        "vendor-dir": "dist/vendor",
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "dist/vendor/npm",
+                "bower-asset-library": "dist/vendor/bower"
+            }
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "php mkdir.php",
+            "npm install"
+        ]
+    }
+}
